@@ -1,0 +1,99 @@
+<!DOCTYPE >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="https://kit.fontawesome.com/46acfb3091.js" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  
+      <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <title>Landing Page</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+ 
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <input type="checkbox" id="check" >
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label> 
+      <!-- Navigation starts as empty UL that will be populated with JS  -->
+    
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>Landing Page </h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Section 1" class="your-active-class">
+      <div class="landing__container">
+        <h2>Section 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section2" data-nav="Section 2">
+      <div class="landing__container">
+        <h2>Section 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section3" data-nav="Section 3">
+      <div class="landing__container">
+        <h2>Section 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section4" data-nav="Section 4">
+      <div class="landing__container">
+        <h2>Section 4</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim lectus vitae dui congue consequat. Sed vitae neque vehicula, convallis nibh eu, vulputate augue. Vestibulum a aliquam massa. Aenean eu urna nunc. Sed eu turpis cursus, iaculis eros non, consectetur ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ullamcorper urna nec odio sagittis dictum.</p>
+
+        <p>nteger sollicitudin ligula in tempus condimentum. Suspendisse ut risus massa. Sed ut risus sit amet velit rhoncus aliquam. Quisque euismod sem id eros efficitur sollicitudin. Sed in massa id turpis ultricies tempor. Suspendisse at pulvinar lacus. Sed volutpat augue quis nibh porta, nec molestie felis interdum. Proin iaculis sollicitudin sem, ut lacinia quam placerat finibus. In hac habitasse platea dictumst.</p>
+      </div>
+    </section>
+    <section id="section5" data-nav="Section 5">
+      <div class="landing__container">
+        <h2>Section 5</h2>
+        <p>Duis non leo eget ligula accumsan facilisis. Maecenas posuere, nunc eu cursus dapibus, est purus consequat justo, blandit fringilla lorem ante eget arcu. Suspendisse velit elit, dapibus eget enim et, tempus eleifend risus. Aliquam at aliquam tellus, eget cursus erat. Duis ac molestie ante. Aliquam at mi egestas, tempor purus id, bibendum felis. Vestibulum venenatis ultrices lacus eu fringilla. Mauris facilisis turpis vel dolor suscipit ullamcorper. Donec molestie sapien ac ex porta, et efficitur lacus efficitur.</p>
+
+        <p>Donec iaculis ullamcorper risus id hendrerit. Nam id elit pellentesque, mattis lacus non, sollicitudin est. Donec id dignissim magna. Praesent vel massa volutpat, placerat risus sit amet, consequat massa. Etiam vel magna maximus, finibus sem in, malesuada lorem. Phasellus at vehicula magna. Sed viverra tortor felis, ut rhoncus diam tincidunt in. Praesent sit amet tortor mauris. Aenean imperdiet suscipit placerat. Etiam efficitur finibus augue, malesuada ultrices ligula molestie eget. Sed bibendum, nunc et posuere gravida, erat nisi feugiat turpis, sed efficitur nibh dui ut ipsum. Nullam sollicitudin hendrerit elit, nec consectetur neque dictum eget.</p>
+      </div>
+    </section>
+    <section id="section6" data-nav="Section 6">
+      <div class="landing__container">
+        <h2>Section 6</h2>
+        <p>Etiam dui nisl, egestas eget sodales sagittis, consectetur vitae lacus. Morbi varius neque ante, eget vulputate risus viverra at. Donec non enim magna. Vestibulum auctor laoreet nisl. Donec eu ligula vel diam bibendum tincidunt. Nulla iaculis urna non ipsum sagittis tempor. Suspendisse porttitor luctus erat, in semper eros iaculis eget. Aliquam porttitor lectus ac congue pretium. Duis vel dolor quis odio pretium tristique ut blandit turpis. Fusce ipsum mi, rutrum egestas quam at, aliquam tincidunt lorem.</p>
+
+        <p>Sed lobortis augue imperdiet, aliquam odio quis, ultrices justo. Aliquam erat volutpat. Nam cursus arcu ut elit lobortis, nec sollicitudin leo convallis. Sed accumsan risus vel ullamcorper suscipit. Duis tempus ut arcu vel pulvinar. Cras dapibus rhoncus ullamcorper. Donec venenatis congue augue eu blandit. Morbi odio nulla, pellentesque id enim nec, facilisis aliquet neque. Proin a blandit nisl. Mauris ac lectus id purus sollicitudin sagittis eget a urna. Morbi sed risus metus. Duis nulla nisi, tempor quis orci eu, consequat rutrum elit. Etiam ullamcorper pharetra ante a cursus.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+  </footer>
+   <!--
+    Button to scroll to the top of the page
+  -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <script src="js/app.js"></script>
+</body>
+</html>
