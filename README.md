@@ -7,6 +7,6 @@ The active section in the Navbar should be highlighted.
 ![7](https://github.com/areejsalah/Landing-Page/assets/115875877/f2e34d64-e64d-4af7-b766-44bb3e55b8ae)
 ![6](https://github.com/areejsalah/Landing-Page/assets/115875877/a1cffa9b-c370-4663-a426-6874774d0b7c)
 
+![10](https://github.com/areejsalah/Landing-Page/assets/115875877/0d241348-9b2d-47a4-9df8-600b0e9f4fcb)
 
-![8](https://github.com/areejsalah/Landing-Page/assets/115875877/a61f15d6-f23e-4b11-8daa-fec3342b2133)
 
