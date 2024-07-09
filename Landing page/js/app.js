@@ -34,13 +34,22 @@ nav.insertBefore(ul1, nav.firstChild);
     let a = document.createElement('a');
     a.setAttribute('href', "#"+sectionId);
     a.innerHTML = section.dataset.nav;
-    //a.textContent = section.dataset.nav;
+   
     a.setAttribute('id', "#"+sectionId);
     li.appendChild(a);
     a.classList.add("menu__link");
     ul1.appendChild(li);
     
 }
+//create the bars
+let ulBars = document.createElement('ul');
+ulBars.classList.add("hamburger");
+for(let i=0; i<3 ; i++){
+  let li = document.createElement('li');
+  li.classList.add('bar');
+  ulBars.appendChild(li);
+}
+nav.appendChild(ulBars);
 //Responsive nav bar
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector("#navbar__list");
