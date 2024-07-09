@@ -13,30 +13,7 @@
  * 
 */
 
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
 
-/**
- * Define Global Variables
- * 
-*/
-
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
 
 //Define Global Variables
 let listOfSections = document.querySelectorAll("section");
@@ -45,8 +22,8 @@ let nav = document.querySelector(".navbar__menu");
 // build the nav
 let ul1 = document.createElement('ul');
 ul1.id = "navbar__list";
+nav.insertBefore(ul1, nav.firstChild);
 
-nav.appendChild(ul1);
 
 
 
@@ -64,7 +41,29 @@ nav.appendChild(ul1);
     ul1.appendChild(li);
     
 }
+//Responsive nav bar
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("#navbar__list");
 
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active_bar");
+    navMenu.classList.toggle("active_bar");
+}
+
+
+// when we click on hamburger icon its close 
+
+const navLink = document.querySelectorAll(".menu__link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu)
+  );
+
+function closeMenu() {
+    hamburger.classList.remove("active_bar");
+    navMenu.classList.remove("active_bar");
+}
 
 
 // Add class 'active' to section when near top of viewport
@@ -73,8 +72,7 @@ nav.appendChild(ul1);
   
     for (let section of listOfSections) {
         const box = section.getBoundingClientRect();
-        let id = section.getAttribute('id');
-        let VALUE= 150;
+        const VALUE= 150;
         //Find a value that works best, but 150 seems to be a good start.
         if (box.top <= VALUE && box.bottom >= VALUE) {
             section.classList.add("your-active-class");
@@ -93,8 +91,8 @@ document.addEventListener("scroll",  makeActive);
 
 // Scroll to anchor ID using scrollTO event
 // Scroll to section on link click
-var scrollLinks = document.querySelectorAll('a[href^="#"]');
-  var scrollOffset = 150;
+let scrollLinks = document.querySelectorAll('a[href^="#"]');
+  const scrollOffset = 150;
   
 
   scrollLinks.forEach(anchor => {
@@ -102,10 +100,10 @@ var scrollLinks = document.querySelectorAll('a[href^="#"]');
       
       console.log(anchor);
       e.preventDefault();
-      var target = document.querySelector(this.getAttribute('href'));
+      let target = document.querySelector(this.getAttribute('href'));
       if (target) {
         
-        var targetOffset = target.getBoundingClientRect().top + window.pageYOffset - scrollOffset;
+        let targetOffset = target.getBoundingClientRect().top + window.pageYOffset - scrollOffset;
         window.scrollTo({
           top: targetOffset,
           behavior: 'smooth'
@@ -180,7 +178,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 // make a sticky navbar 
-let hideNav;
+/*let hideNav;
 document.addEventListener("scroll", () => {
     nav.style.display = "block";
     clearTimeout(hideNav);
@@ -189,4 +187,4 @@ document.addEventListener("scroll", () => {
             nav.style.display = "none";
         }, 1600);
     }
-});
+}); */
