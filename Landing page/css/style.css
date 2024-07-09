@@ -91,13 +91,14 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 1.5rem;
+   
 }
 
 .hamburger {
     display: none;
 }
 
-.bar {
+.hamburger .bar {
     
     display: block;
     width: 25px;
@@ -108,7 +109,7 @@ section {
     background-color: #101010; 
    
 }
-.navbar__menu ul {
+.navbar__list {
     padding-left: 0;
     margin: 0;
     text-align: right;
@@ -119,23 +120,24 @@ section {
 }
 
 .navbar__menu .menu__link {
-    display: inline-block;
+   
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
+    color: black;
+    transition: ease 0.3s all;
+}
+.navbar__list li a{
     color: #000;
 }
+
 
 .navbar__menu .menu__link:hover {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
 }
-.navbar__list .menu__link{
-    background: #333;
-    color: #fff;
-    transition: ease 0.3s all;
-}
+
 
 /* Header Styles */
 .page__header {
@@ -165,12 +167,7 @@ section {
     padding: 1em;
     text-align: left;
 }
-.navbar__menu .toggle_btn{
-    display: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
+
 
 @media only screen and (min-width: 35em){
     .landing__container {
@@ -286,13 +283,17 @@ section.your-active-class .landing__container::after {
     h1{
         padding-top: 30px;
     }
-    .nav_menu {
+    #navbar__list {
+        padding-top: 20px;
+       
         position: fixed;
-        left: -100%;
-        top: 5rem;
+       display: flex;
+        left: -120%; 
+        top: 4rem;
+        height: 100vh;
         flex-direction: column;
-        /* background-color: #fff; */
-        background-color: #222;
+        gap:5rem;
+        background-color: rgb(0, 40, 77);
         width: 100%;
         border-radius: 10px;
         text-align: center;
@@ -318,6 +319,7 @@ section.your-active-class .landing__container::after {
         font-size: 18px;
       }
       .hamburger {
+       
         display: block;
         cursor: pointer;
     }
@@ -336,33 +338,17 @@ section.your-active-class .landing__container::after {
 
       
       
-    }
-    @media (max-width: 858px ){
+    
+    
         
-        
-       
-        .navbar__menu  ul{
-            
-            position: fixed;
-            width:100%;
-            height: 100vh;
-            top:50px;
-            background: #2c3e50;
-            left: 0;
-            text-align: center;
-            left: -100%;
-            transition: all .5s;
-            display: flex;
-            flex-direction: column;
-        }
-         nav ul li {
+         .nav__menu .navbar__list  li {
             
             display: block;
             margin: 20px 0;
             line-height: 30px;
             
         }
-         nav ul li a{
+        .nav__menu .navbar__list  li a{
           
             font-size: 20px;
          }
@@ -375,6 +361,8 @@ section.your-active-class .landing__container::after {
 
              h2 {
                 font-size: 1.5em;
+                
+                
             }
             h1 {
                 font-size: 3em;
@@ -402,4 +390,4 @@ section.your-active-class .landing__container::after {
                 border-radius: 2px;
               }
          
- }
+            }
